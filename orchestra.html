@@ -11,8 +11,17 @@
   .back-link:hover { text-decoration: underline; }
   .track { background: white; border-radius: 12px; padding: 20px; margin: 15px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
   .track-name { font-weight: bold; font-size: 1.1em; margin-bottom: 5px; color: #2c3e50; }
-  .track-desc { color: #777; font-size: 0.85em; margin-bottom: 12px; }
-  audio { width: 100%; }
+  .track-desc { color: #777; font-size: 0.85em; margin-bottom: 10px; }
+  audio { width: 100%; margin-bottom: 10px; }
+  .speed-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .speed-label { font-size: 0.8em; color: #888; margin-right: 4px; }
+  .speed-btn {
+    padding: 4px 10px; border: 1.5px solid #27ae60; border-radius: 20px;
+    background: white; color: #27ae60; font-size: 0.82em; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .speed-btn:hover { background: #e8f8f0; }
+  .speed-btn.active { background: #27ae60; color: white; font-weight: bold; }
 </style>
 </head>
 <body>
@@ -22,34 +31,80 @@
 <div class="track">
   <div class="track-name">プロコフィエフ 交響曲 第5番</div>
   <div class="track-desc">Prokofiev Symphony No.5</div>
-  <audio controls preload="none">
+  <audio id="audio0" controls preload="none">
     <source src="Orchestra-study/%E3%83%97%E3%83%AD%E3%82%B3%E3%83%95%E3%82%A3%E3%82%A8%E3%83%95%E4%BA%A4%E9%9F%BF%E6%9B%B2%E7%AC%AC%EF%BC%95%E7%95%AA.wav" type="audio/wav">
   </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio0', 0.5, this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio0', 0.6, this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio0', 0.7, this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio0', 0.8, this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio0', 0.9, this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio0', 1.0, this)">1.0</button>
+  </div>
 </div>
 
 <div class="track">
   <div class="track-name">ラコッツィー行進曲</div>
   <div class="track-desc">Berlioz — Rákóczi March (La Damnation de Faust)</div>
-  <audio controls preload="none">
+  <audio id="audio1" controls preload="none">
     <source src="Orchestra-study/%E3%83%A9%E3%82%B3%E3%83%83%E3%83%84%E3%82%A3%E3%83%BC%E8%A1%8C%E9%80%B2%E6%9B%B2.wav" type="audio/wav">
   </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio1', 0.5, this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio1', 0.6, this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio1', 0.7, this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio1', 0.8, this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio1', 0.9, this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio1', 1.0, this)">1.0</button>
+  </div>
 </div>
 
 <div class="track">
   <div class="track-name">ローマの噴水</div>
   <div class="track-desc">Respighi — Fountains of Rome</div>
-  <audio controls preload="none">
+  <audio id="audio2" controls preload="none">
     <source src="Orchestra-study/%E3%83%AD%E3%83%BC%E3%83%9E%E3%81%AE%E5%99%B4%E6%B0%B4.wav" type="audio/wav">
   </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio2', 0.5, this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio2', 0.6, this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio2', 0.7, this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio2', 0.8, this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio2', 0.9, this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio2', 1.0, this)">1.0</button>
+  </div>
 </div>
 
 <div class="track">
   <div class="track-name">ワルキューレ（騎行）</div>
   <div class="track-desc">Wagner — Ride of the Valkyries</div>
-  <audio controls preload="none">
+  <audio id="audio3" controls preload="none">
     <source src="Orchestra-study/%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC.wav" type="audio/wav">
   </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio3', 0.5, this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio3', 0.6, this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio3', 0.7, this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio3', 0.8, this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio3', 0.9, this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio3', 1.0, this)">1.0</button>
+  </div>
 </div>
 
+<script>
+function setSpeed(audioId, speed, btn) {
+  const audio = document.getElementById(audioId);
+  audio.playbackRate = speed;
+  // ボタンのactive状態を切り替え
+  const btns = btn.parentElement.querySelectorAll('.speed-btn');
+  btns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>
