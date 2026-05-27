@@ -14,16 +14,9 @@
   audio { width: 100%; margin-bottom: 10px; }
   .speed-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
   .speed-label { font-size: 0.8em; color: #888; margin-right: 4px; }
-  .speed-btn {
-    padding: 4px 10px; border: 1.5px solid #e67e22; border-radius: 20px;
-    background: white; color: #e67e22; font-size: 0.82em; cursor: pointer;
-    transition: all 0.15s;
-  }
+  .speed-btn { padding: 4px 10px; border: 1.5px solid #e67e22; border-radius: 20px; background: white; color: #e67e22; font-size: 0.82em; cursor: pointer; transition: all 0.15s; }
   .speed-btn:hover { background: #fef0e6; }
   .speed-btn.active { background: #e67e22; color: white; font-weight: bold; }
-  .unavailable { background: #f9f9f9; border: 1.5px dashed #ccc; opacity: 0.7; }
-  .unavailable .track-name { color: #999; }
-  .badge { display: inline-block; font-size: 0.72em; background: #e74c3c; color: white; border-radius: 4px; padding: 1px 6px; margin-left: 8px; vertical-align: middle; }
 </style>
 </head>
 <body>
@@ -81,7 +74,7 @@
 <div class="track">
   <div class="track-name">Lip Flexibility 8</div>
   <audio id="audio3" controls preload="none">
-    <source src="Basics/Lip%20Flexibility8.wav" type="audio/wav">
+    <source src="Basics/Lip%20Flexibility8.m4a" type="audio/mp4">
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
@@ -97,7 +90,7 @@
 <div class="track">
   <div class="track-name">Lip Flexibility 9</div>
   <audio id="audio4" controls preload="none">
-    <source src="Basics/Lip%20Flexibility%EF%BC%99wav.wav" type="audio/wav">
+    <source src="Basics/Lip%20Flexibility%EF%BC%99wav.m4a" type="audio/mp4">
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
@@ -113,7 +106,7 @@
 <div class="track">
   <div class="track-name">Lip Flexibility 10</div>
   <audio id="audio5" controls preload="none">
-    <source src="Basics/Lip%20Flexibility10.wav" type="audio/wav">
+    <source src="Basics/Lip%20Flexibility10.m4a" type="audio/mp4">
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
@@ -126,15 +119,10 @@
   </div>
 </div>
 
-<div class="track unavailable">
-  <div class="track-name">Lip Flexibility 11 <span class="badge">175MB — 未対応</span></div>
-  <div class="track-desc" style="color:#999; font-size:0.85em;">GitHubの上限(100MB)を超えているためアップロード不可。別途対応が必要です。</div>
-</div>
-
 <div class="track">
-  <div class="track-name">Lip Flexibility 12</div>
+  <div class="track-name">Lip Flexibility 11</div>
   <audio id="audio6" controls preload="none">
-    <source src="Basics/Lip%20Flexibility12.wav" type="audio/wav">
+    <source src="Basics/Lip%20Flexibility11.m4a" type="audio/mp4">
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
@@ -144,6 +132,22 @@
     <button class="speed-btn" onclick="setSpeed('audio6',0.8,this)">0.8</button>
     <button class="speed-btn" onclick="setSpeed('audio6',0.9,this)">0.9</button>
     <button class="speed-btn active" onclick="setSpeed('audio6',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 12</div>
+  <audio id="audio7" controls preload="none">
+    <source src="Basics/Lip%20Flexibility12.m4a" type="audio/mp4">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio7',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio7',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio7',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio7',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio7',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio7',1.0,this)">1.0</button>
   </div>
 </div>
 
