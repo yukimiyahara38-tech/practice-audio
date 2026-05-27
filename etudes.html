@@ -15,11 +15,7 @@
   audio { width: 100%; margin-bottom: 10px; }
   .speed-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
   .speed-label { font-size: 0.8em; color: #888; margin-right: 4px; }
-  .speed-btn {
-    padding: 4px 10px; border: 1.5px solid #3498db; border-radius: 20px;
-    background: white; color: #3498db; font-size: 0.82em; cursor: pointer;
-    transition: all 0.15s;
-  }
+  .speed-btn { padding: 4px 10px; border: 1.5px solid #3498db; border-radius: 20px; background: white; color: #3498db; font-size: 0.82em; cursor: pointer; transition: all 0.15s; }
   .speed-btn:hover { background: #eaf4fd; }
   .speed-btn.active { background: #3498db; color: white; font-weight: bold; }
 </style>
@@ -32,16 +28,16 @@
   <div class="track-name">Blazhevich — エチュード No.1</div>
   <div class="track-desc">ブラジェヴィチ</div>
   <audio id="audio0" controls preload="none">
-    <source src="Etudes/Blazhevich%EF%BC%91.wav" type="audio/wav">
+    <source src="Etudes/Blazhevich%EF%BC%91.m4a" type="audio/mp4">
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
-    <button class="speed-btn" onclick="setSpeed('audio0', 0.5, this)">0.5</button>
-    <button class="speed-btn" onclick="setSpeed('audio0', 0.6, this)">0.6</button>
-    <button class="speed-btn" onclick="setSpeed('audio0', 0.7, this)">0.7</button>
-    <button class="speed-btn" onclick="setSpeed('audio0', 0.8, this)">0.8</button>
-    <button class="speed-btn" onclick="setSpeed('audio0', 0.9, this)">0.9</button>
-    <button class="speed-btn active" onclick="setSpeed('audio0', 1.0, this)">1.0</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio0',1.0,this)">1.0</button>
   </div>
 </div>
 
@@ -49,16 +45,16 @@
   <div class="track-name">Grigoriev — エチュード No.1</div>
   <div class="track-desc">グレゴリエフ</div>
   <audio id="audio1" controls preload="none">
-    <source src="Etudes/Grigoriev1.wav" type="audio/wav">
+    <source src="Etudes/Grigoriev1.m4a" type="audio/mp4">
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
-    <button class="speed-btn" onclick="setSpeed('audio1', 0.5, this)">0.5</button>
-    <button class="speed-btn" onclick="setSpeed('audio1', 0.6, this)">0.6</button>
-    <button class="speed-btn" onclick="setSpeed('audio1', 0.7, this)">0.7</button>
-    <button class="speed-btn" onclick="setSpeed('audio1', 0.8, this)">0.8</button>
-    <button class="speed-btn" onclick="setSpeed('audio1', 0.9, this)">0.9</button>
-    <button class="speed-btn active" onclick="setSpeed('audio1', 1.0, this)">1.0</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio1',1.0,this)">1.0</button>
   </div>
 </div>
 
