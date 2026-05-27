@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basics — Lip Flexibility</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #fdf6f0; }
+  h1 { color: #2c3e50; border-bottom: 3px solid #e67e22; padding-bottom: 10px; }
+  .back-link { color: #e67e22; text-decoration: none; font-size: 0.9em; }
+  .back-link:hover { text-decoration: underline; }
+  .track { background: white; border-radius: 12px; padding: 20px; margin: 15px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.12); }
+  .track-name { font-weight: bold; font-size: 1.1em; margin-bottom: 10px; color: #2c3e50; }
+  audio { width: 100%; margin-bottom: 10px; }
+  .speed-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .speed-label { font-size: 0.8em; color: #888; margin-right: 4px; }
+  .speed-btn {
+    padding: 4px 10px; border: 1.5px solid #e67e22; border-radius: 20px;
+    background: white; color: #e67e22; font-size: 0.82em; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .speed-btn:hover { background: #fef0e6; }
+  .speed-btn.active { background: #e67e22; color: white; font-weight: bold; }
+  .unavailable { background: #f9f9f9; border: 1.5px dashed #ccc; opacity: 0.7; }
+  .unavailable .track-name { color: #999; }
+  .badge { display: inline-block; font-size: 0.72em; background: #e74c3c; color: white; border-radius: 4px; padding: 1px 6px; margin-left: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<a class="back-link" href="index.html">← Practice Audio トップへ</a>
+<h1>🎺 Basics — Lip Flexibility</h1>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 1</div>
+  <audio id="audio0" controls preload="none">
+    <source src="Basics/Lip%20Flexibility%EF%BC%91.mp3" type="audio/mpeg">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio0',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 2</div>
+  <audio id="audio1" controls preload="none">
+    <source src="Basics/Lip%20Flexibility%EF%BC%92.mp3" type="audio/mpeg">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio1',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 3</div>
+  <audio id="audio2" controls preload="none">
+    <source src="Basics/Lip%20Flexibility3.mp3" type="audio/mpeg">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio2',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio2',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio2',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio2',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio2',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio2',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 8</div>
+  <audio id="audio3" controls preload="none">
+    <source src="Basics/Lip%20Flexibility8.wav" type="audio/wav">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio3',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio3',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio3',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio3',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio3',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio3',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 9</div>
+  <audio id="audio4" controls preload="none">
+    <source src="Basics/Lip%20Flexibility%EF%BC%99wav.wav" type="audio/wav">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio4',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio4',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio4',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio4',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio4',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio4',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 10</div>
+  <audio id="audio5" controls preload="none">
+    <source src="Basics/Lip%20Flexibility10.wav" type="audio/wav">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio5',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio5',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio5',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio5',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio5',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio5',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<div class="track unavailable">
+  <div class="track-name">Lip Flexibility 11 <span class="badge">175MB — 未対応</span></div>
+  <div class="track-desc" style="color:#999; font-size:0.85em;">GitHubの上限(100MB)を超えているためアップロード不可。別途対応が必要です。</div>
+</div>
+
+<div class="track">
+  <div class="track-name">Lip Flexibility 12</div>
+  <audio id="audio6" controls preload="none">
+    <source src="Basics/Lip%20Flexibility12.wav" type="audio/wav">
+  </audio>
+  <div class="speed-controls">
+    <span class="speed-label">速度：</span>
+    <button class="speed-btn" onclick="setSpeed('audio6',0.5,this)">0.5</button>
+    <button class="speed-btn" onclick="setSpeed('audio6',0.6,this)">0.6</button>
+    <button class="speed-btn" onclick="setSpeed('audio6',0.7,this)">0.7</button>
+    <button class="speed-btn" onclick="setSpeed('audio6',0.8,this)">0.8</button>
+    <button class="speed-btn" onclick="setSpeed('audio6',0.9,this)">0.9</button>
+    <button class="speed-btn active" onclick="setSpeed('audio6',1.0,this)">1.0</button>
+  </div>
+</div>
+
+<script>
+function setSpeed(audioId, speed, btn) {
+  const audio = document.getElementById(audioId);
+  audio.playbackRate = speed;
+  const btns = btn.parentElement.querySelectorAll('.speed-btn');
+  btns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
