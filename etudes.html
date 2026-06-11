@@ -32,12 +32,11 @@
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
-    <button class="speed-btn" onclick="setSpeed('audio0',0.5,this)">0.5</button>
     <button class="speed-btn" onclick="setSpeed('audio0',0.6,this)">0.6</button>
-    <button class="speed-btn" onclick="setSpeed('audio0',0.7,this)">0.7</button>
     <button class="speed-btn" onclick="setSpeed('audio0',0.8,this)">0.8</button>
-    <button class="speed-btn" onclick="setSpeed('audio0',0.9,this)">0.9</button>
     <button class="speed-btn active" onclick="setSpeed('audio0',1.0,this)">1.0</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',1.2,this)">1.2</button>
+    <button class="speed-btn" onclick="setSpeed('audio0',1.4,this)">1.4</button>
   </div>
 </div>
 
@@ -49,21 +48,18 @@
   </audio>
   <div class="speed-controls">
     <span class="speed-label">速度：</span>
-    <button class="speed-btn" onclick="setSpeed('audio1',0.5,this)">0.5</button>
     <button class="speed-btn" onclick="setSpeed('audio1',0.6,this)">0.6</button>
-    <button class="speed-btn" onclick="setSpeed('audio1',0.7,this)">0.7</button>
     <button class="speed-btn" onclick="setSpeed('audio1',0.8,this)">0.8</button>
-    <button class="speed-btn" onclick="setSpeed('audio1',0.9,this)">0.9</button>
     <button class="speed-btn active" onclick="setSpeed('audio1',1.0,this)">1.0</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',1.2,this)">1.2</button>
+    <button class="speed-btn" onclick="setSpeed('audio1',1.4,this)">1.4</button>
   </div>
 </div>
 
 <script>
 function setSpeed(audioId, speed, btn) {
-  const audio = document.getElementById(audioId);
-  audio.playbackRate = speed;
-  const btns = btn.parentElement.querySelectorAll('.speed-btn');
-  btns.forEach(b => b.classList.remove('active'));
+  document.getElementById(audioId).playbackRate = speed;
+  btn.parentElement.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 </script>
